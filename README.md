@@ -45,23 +45,3 @@ Each module will contain discord commands but may also have commandless features
 ### Facilities
 
 ### Admin
-
-## Development Process
-
-### Conventions
-
-### Git Flow
-
-### Database Model
-
-### Directory Structure
-
-### Versioning
-
-## Rules
-
-### Contributing
-
-### Code of Conduct
-
-### Violations
