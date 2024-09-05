@@ -10,6 +10,35 @@ The goal of the bot is to provide helpful functionality to the Sundial Coalition
 
 - [[3SP] Labret](https://github.com/Labretx) (Maintainer)
 
+## Development Progress
+
+- [ ] Permissions
+  - [ ] Command checks
+  - [ ] Database table
+
+- [ ] Configuration
+  - [ ] Permissions
+  - [ ] Stockpiles
+  - [ ] Msupps
+  - [ ] Orders
+  - [ ] Map Info
+  - [ ] Facilities
+  - [ ] Admin
+
+- [ ] Stockpiles
+  - [ ] Create
+  - [ ] Delete
+  - [ ] List
+  - [ ] SunCreate
+  - [ ] SunDelete
+  - [ ] SunList
+
+- [ ] Msupps
+- [ ] Orders
+- [ ] Map Info
+- [ ] Facilities
+- [ ] Admin
+
 # Functionalities
 Below is a list of all the proposed functionalities **3SP-Bot** could have.
   
@@ -69,6 +98,125 @@ These commands will be able to set dedicated channels for usage of module comman
 > Module commands wont be able to be used if not configured in a server.
 
 ## Stockpiles
+
+The `stockpile` module will allow members to create, delete and display the stockpiles of a regiment.\
+The stockpiles are server dependant, meaning a regiments server cannot access the stockpiles of another regiments server.\
+There may be an exception for a coalition server.
+
+### Commands
+
+#### Creating Stockpiles
+
+**Usage:**
+  
+```
+/stockpile create [name} [hex] [city] [code] [type]
+```
+
+**Arguments:**
+
+- name: The name of the stockpile as chosen in the game.
+- hex: The hex the stockpile is located in. This will autocomplete as you type and is case insensitive.
+- city: The city the stockpile is located in. This will autocomplete as you type and will only show cities that have access to a seaport or storage depot and is located in the selected hex.
+- code: The code to access the stockpile with.
+- type: The type of stockpile to be created. Available are: `Member`, `Veteran` and `Officer`. It is not possible to create a stockpile for a higher permission than the user has. A `Veteran` cannot create an `Officer` stockpile.
+
+**Recommended Permission:** `Veteran`
+
+> [!NOTE]
+> If a stockpile is created it is given an ID in the database, which is needed to delete the stockpile again.\
+> The Discord ID of the user creating the stockpile will also be saved to the database.
+
+#### Deleting Stockpiles
+
+**Usage:**
+
+```
+/stockpile delete [id]
+```
+
+**Arguments:**
+
+- id: The ID of the stockpile that should be deleted. The ID of each stockpile is displayed on the stockpile list.
+
+**Recommended Permission:** Will be the same as `/stockpile create`.
+  
+> [!NOTE]
+> Only the user who created the stockpile will be able to delete it again.\
+> Deleting a stockpile can be necessary when a stockpile is lost due to the seaport/storage depot being destroyed or when the reservation timer ran out.
+
+#### Listing Stockpiles
+
+**Usage:**
+
+```
+/stockpile list [type]
+```
+
+**Arguments:**
+
+- type: The type of stockpiles to be shown. `/stockpile list Veteran` will only show `Veteran` stockpiles. It is not possible to list the stockpiles for a higher permission than the user has. A `Veteran` cannot list the `Officer` stockpiles.
+
+**Recommended Permission:** `Veteran`
+
+> [!NOTE]
+> There can only be a single stockpile list per permission per server.\
+> To create another one, the old message needs to be deleted first.\
+> Once a stockpile list is created the `/stockpile create` and `/stockpile delete` commands will update the existing message.
+
+#### Creating Sundial Stockpiles
+
+**Usage:**
+
+```
+/stockpile suncreate [hex] [city] [code] [type]
+```
+
+**Arguments:**
+
+- hex: The hex the stockpile is located in. This will autocomplete as you type and is case insensitive.
+- city: The city the stockpile is located in. This will autocomplete as you type and will only show cities that have access to a seaport or storage depot and is located in the selected hex.
+- code: The code to access the stockpile with.
+- type: The type of stockpile to be created. Available are: `Member`, `Veteran` and `Officer`. It is not possible to create a stockpile for a higher permission than the user has. A `Veteran` cannot create an `Officer` stockpile.
+  
+**Recommended Permission:** `Veteran`
+
+> [!NOTE]
+> Creating a Sundial stockpile doesn't require a name.\
+> The name will be generated using a schema.\
+> For a member stockpile created in Tine the name would be `SunTinM`.
+
+#### Deleting Sundial Stockpiles
+
+**Usage:**
+
+```
+/stockpile sundelete [id]
+```
+
+**Arguments:**
+
+- id: The ID of the stockpile that should be deleted. The ID of each stockpile is displayed on the stockpile list.
+
+**Recommended Permission:** Will be the same as `/stockpile suncreate`.
+
+#### Listing Sundial Stockpiles
+
+**Usage:**
+
+```
+/stockpile sunlist [type]
+```
+
+**Arguments:**
+
+- type: The type of stockpiles to be shown. `/stockpile sunlist Veteran` will only show `Veteran` stockpiles. A `Veteran` cannot list the `Officer` stockpiles.
+
+**Recommended Permission:** `Veteran`
+
+> [!NOTE]
+> There could be an option to show all stockpiles of the regiments belonging to Sundial or an option for the individual regiments to list their stockpiles in the Sundial server.
+
 
 ## Msupps
 
