@@ -19,11 +19,44 @@ These will be individual modules and can be accessed in discord with the followi
 /module command arguments
 ```
 
-The only exception to this will be the [Admin](#admin) and the [Configuration](#configuration) module.
+The only exceptions to this will be the [Permissions](#permissions), [Admin](#admin) and [Configuration](#configuration) module.
   
 Each module will contain discord commands but may also have commandless features, like a task scheduler for example.
 
 ### Permissions
+
+Each regiment might have different hierarchies and an idea of who should be allowed to do what.
+
+For that reason there will be a few permissions available to be set:
+
+- Admin
+- Trusted
+- Officer
+- Veteran
+- Member
+
+`Admin` and `Trusted` permissions are managed by **[3SP] Labret**.
+  
+`Admin` will be able to use special commands needed to manage botdata, for example wiping all data after the end of a war.
+  
+`Trusted` will be able to manage the server whitelist.
+  
+`Officer`, `Veteran` and `Member` permissions are managed by the regiments server mods/admins in their respective servers.
+  
+`Officer` is the highest permission and has access to all `Officer`, `Veteran` and `Member` commands.\
+This permissions should be reserved for the regiments leadership.
+  
+`Veteran` has access to all `Veteran` and `Member` commands.\
+This permission should be used for functionalities that require a certain amount of trust or knowledge.
+  
+`Member` is the lowest permission and only has access to `Member` commands.\
+This permission should be given to the vast majority of regiment members and used for commands, that should be available to everyone.
+  
+To manage these permissions, they can be linked to Discord roles via commands in the server.\
+It is possible to assign a permission to multiple roles, but not multiple permissions to a single role.
+  
+The `Admin` and `Trusted` permissions do **not** grant access to `Officer`, `Veteran` or `Member` commands if the user doesn't have the respective permission given in the regiments server.\
+They are purely for managing data and access to the bot.
 
 ### Configuration
 
