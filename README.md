@@ -10,7 +10,7 @@ The goal of the bot is to provide helpful functionality to the Sundial Coalition
 
 - [[3SP] Labret](https://github.com/Labretx) (Maintainer)
 
-## Functionalities
+# Functionalities
 Below is a list of all the proposed functionalities **3SP-Bot** could have.
   
 These will be individual modules and can be accessed in discord with the following command pattern:
@@ -23,7 +23,7 @@ The only exceptions to this will be the [Permissions](#permissions), [Admin](#ad
   
 Each module will contain discord commands but may also have commandless features, like a task scheduler for example.
 
-### Permissions
+## Permissions
 
 Each regiment might have different hierarchies and an idea of who should be allowed to do what.
 
@@ -54,30 +54,38 @@ This permission should be given to the vast majority of regiment members and use
   
 To manage these permissions, they can be linked to Discord roles via commands in the server.\
 It is possible to assign a permission to multiple roles, but not multiple permissions to a single role.
+
+> [!NOTE]
+> The `Admin` and `Trusted` permissions do **NOT** grant access to `Officer`, `Veteran` or `Member` commands if the user doesn't have the respective permission given in the regiments server.\
+> They are purely for managing data and access to the bot.
+
+## Configuration
+
+Each module will be provided with a `config` command, since a lot of bigger servers have a lot of channels and a good overview could prove difficult without proper configuration.
   
-The `Admin` and `Trusted` permissions do **not** grant access to `Officer`, `Veteran` or `Member` commands if the user doesn't have the respective permission given in the regiments server.\
-They are purely for managing data and access to the bot.
+These commands will be able to set dedicated channels for usage of module commands as well as the permission needed for each command.
 
-### Configuration
+> [!WARNING]
+> Module commands wont be able to be used if not configured in a server.
 
-### Stockpiles
+## Stockpiles
 
-### Msupps
+## Msupps
 
-### Orders
+## Orders
 
-#### MPF Orders
+### MPF Orders
 
-#### Msupps Orders
+### Msupps Orders
 
-#### Custom Orders
+### Custom Orders
 
-### Map Info
+## Map Info
 
-#### Resources
+### Resources
 
-#### Buildings
+### Buildings
 
-### Facilities
+## Facilities
 
-### Admin
+## Admin
