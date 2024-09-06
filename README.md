@@ -53,6 +53,11 @@ The goal of the bot is to provide helpful functionality to the Sundial Coalition
     - [ ] Stats
 
 - [ ] Map Info
+  - [ ] Territory Updates
+  - [ ] Commands
+    - [ ] Resources
+    - [ ] Buildings
+
 - [ ] Facilities
 - [ ] Admin
 
@@ -459,9 +464,52 @@ An msupps order will automatically be created, if the maintenance tunnel would b
 
 ## Map Info
 
-### Resources
+The `mapinfo` module will allow members quick access to the location of resource fields/mines as well as industry buildings.
 
-### Buildings
+To do this efficiently this module will utilize the [warapi](https://github.com/clapfoot/warapi) to pull information about the current war.
+
+The dynamic data has to be wiped after a new war starts.
+
+### Commands
+
+#### Locate Resources
+
+**Usage:**
+
+```
+/mapinfo resources [resource] [hex]
+```
+
+**Arguments:**
+
+- resource (optional): The resource you want to find locations for. If not set will display all resource fields/mines.
+- hex (optional): The hex where you want to find resources in. If not set will display all map locations.
+
+**Recommended Permission:** `Member`
+
+---
+
+#### Locate Buildings
+
+**Usage:**
+
+```
+/mapinfo buildings [building] [hex]
+```
+
+**Arguments:**
+
+- resource (optional): The building you want to find locations for. If not set will display all buildings.
+- hex (optional): The hex where you want to find buildings in. If not set will display all map locations.
+
+**Recommended Permission:** `Member`
+
+> [!WARNING]
+> Buildings only include industry buildings that are found within towns!
+
+### Territory Updates
+
+Using the [warapi](https://github.com/clapfoot/warapi) there will be daily updates on which territories on the map have changed owner and will be sent to the configured chat.
 
 ## Facilities
 
