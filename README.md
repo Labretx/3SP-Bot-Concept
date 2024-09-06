@@ -34,6 +34,17 @@ The goal of the bot is to provide helpful functionality to the Sundial Coalition
   - [ ] SunList
 
 - [ ] Msupps
+  - [ ] Task to reduce inventory by demand every 24h
+  - [ ] Commands
+    - [ ] Create
+    - [ ] Delete
+    - [ ] List
+    - [ ] Edit
+    - [ ] Add
+    - [ ] MapCreate
+    - [ ] MapDelete
+    - [ ] MapShow
+
 - [ ] Orders
 - [ ] Map Info
 - [ ] Facilities
