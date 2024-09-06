@@ -241,7 +241,7 @@ There may be an exception for a coalition server.
 
 ## Msupps
 
-The `Msupps` module is used to manage maintenance tunnels and their daily msupps demand as well as processing deliveries to the tunnel.
+The `msupps` module is used to manage maintenance tunnels and their daily msupps demand as well as processing deliveries to the tunnel.
 
 ### Commands
 
@@ -381,14 +381,75 @@ The `Msupps` module is used to manage maintenance tunnels and their daily msupps
 
 **Recommended Permission:** Will be the same as `/msupps create`.
 
-
 ## Orders
 
-### MPF Orders
+The `order` module allows the creation of orders for preparation of OPs, facility maintenance, moving stockpile inventory, etc.
+
+Created orders will be sent to the chat and have a button to lock the specific order to the person clicking the button.
+
+After locking an order, there will be another button to mark the order as fulfilled.
+
+The database will keep track of the orders and can be used to create statistics.
+
+### Commands
+
+#### Creating an order
+
+**Usage:**
+
+```
+/order create [order] [amount]
+```
+
+**Arguments:**
+
+- order: The text of the order. For example: *60 crates shirts to Buckler Sound*
+- amount (optional): The amount of orders to be created. Default is 1.
+
+**Recommended Permission:** `Officer`
+
+---
+
+#### Creating an MPF order
+
+**Usage:**
+
+```
+/order mpf [item] [amount]
+```
+
+**Arguments:**
+
+- item: The item that should be queued. Will autocomplete while typing.
+- amount (optional): The amount of orders to be created. Default is 1.
+
+**Recommended Permission:** `Officer`
+
+> [!NOTE]
+> MPF orders will always show the material cost in materials and crates.
+> An MPF order will **always** be a full queue.
+
+---
+
+#### Displaying stats
+
+**Usage:**
+
+```
+/order stats
+```
+
+**Recommended Permission:** `Officer`
+
+> [!NOTE]
+> This will display a descending ranking of completed orders per member.\
+> Instead of a message, this will be visualized.
 
 ### Msupps Orders
 
-### Custom Orders
+The Msupps part of the `order` module does not have commands, but is rather an extension of the `msupps` module.
+
+An msupps order will automatically be created, if the maintenance tunnel would be empty in 24 hours or less.
 
 ## Map Info
 
