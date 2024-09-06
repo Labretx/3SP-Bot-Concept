@@ -127,6 +127,8 @@ There may be an exception for a coalition server.
 > If a stockpile is created it is given an ID in the database, which is needed to delete the stockpile again.\
 > The Discord ID of the user creating the stockpile will also be saved to the database.
 
+---
+
 #### Deleting Stockpiles
 
 **Usage:**
@@ -144,6 +146,8 @@ There may be an exception for a coalition server.
 > [!NOTE]
 > Only the user who created the stockpile will be able to delete it again.\
 > Deleting a stockpile can be necessary when a stockpile is lost due to the seaport/storage depot being destroyed or when the reservation timer ran out.
+
+---
 
 #### Listing Stockpiles
 
@@ -163,6 +167,8 @@ There may be an exception for a coalition server.
 > There can only be a single stockpile list per permission per server.\
 > To create another one, the old message needs to be deleted first.\
 > Once a stockpile list is created the `/stockpile create` and `/stockpile delete` commands will update the existing message.
+
+---
 
 #### Creating Sundial Stockpiles
 
@@ -186,6 +192,8 @@ There may be an exception for a coalition server.
 > The name will be generated using a schema.\
 > For a member stockpile created in Tine the name would be `SunTinM`.
 
+---
+
 #### Deleting Sundial Stockpiles
 
 **Usage:**
@@ -199,6 +207,8 @@ There may be an exception for a coalition server.
 - id: The ID of the stockpile that should be deleted. The ID of each stockpile is displayed on the stockpile list.
 
 **Recommended Permission:** Will be the same as `/stockpile suncreate`.
+
+---
 
 #### Listing Sundial Stockpiles
 
@@ -219,6 +229,147 @@ There may be an exception for a coalition server.
 
 
 ## Msupps
+
+The `Msupps` module is used to manage maintenance tunnels and their daily msupps demand as well as processing deliveries to the tunnel.
+
+### Commands
+
+#### Creating a Maintenance Tunnel
+
+**Usage:**
+
+```
+/msupps create [name] [demand] [inventory]
+```
+
+**Arguments:**
+
+- name: The name of the maintenance tunnel. Should be able to be identified on a map.
+- demand: The daily demand of the maintenance tunnel.
+- inventory: The current amount of msupps in the maintenance tunnel.
+
+**Recommended Permission:** `Veteran`
+
+> [!NOTE]
+> This will add a timestamp to the database when the maintenance tunnel was added and a task to reduce the inventory of the tunnel by the daily demand every 24 hours.
+
+---
+
+#### Deleting a Maintenance Tunnel
+
+**Usage:**
+
+```
+/msupps delete [id]
+```
+
+**Arguments:**
+
+- id: The ID of the maintenance tunnel. Can be found on the maintenance tunnel list.
+
+**Recommended Permission:** Will be the same as `/msupps create`.
+
+---
+
+#### Listing Maintenance Tunnels
+
+**Usage**:
+
+```
+/msupps list
+```
+
+**Recommended Permission:** WIll be the same as `/msupps create`.
+
+> [!NOTE]
+> When the created task updates the inventory, it will also reflect on the list.
+
+---
+
+#### Filling a Maintenance Tunnel
+
+**Usage:**
+
+```
+/msupps add [name] [amount]
+```
+
+**Arguments:**
+
+- name: The name of the maintenance tunnel.
+- amount: The amount of msupps delivered to the maintenance tunnel.
+
+**Recommended Permission:** `Member`
+
+---
+
+#### Adjusting Maintenance Tunnel Inventory
+
+**Usage:**
+
+```
+/msupps edit [name] [inventory]
+```
+
+**Arguments:**
+
+- name: The name of the maintenance tunnel to edit.
+- inventory: The new inventory of the tunnel.
+
+**Recommended Permission:** Will be the same as `/msupps create`.
+
+> [!NOTE]
+> It might be necessary to adjust the amount of msupps in a maintenance tunnel if deliveries are not added via command, players outside of the regiments deliver to the tunnel or someone takes msupps out of the tunnel.
+
+---
+
+#### Creating a Maintenance Tunnel Map
+
+**Usage:**
+
+```
+/msupps mapcreate [name] [map]
+```
+
+**Arguments:**
+
+- name: The name of the map.
+- map: An image of the map showing maintenance tunnel positions.
+
+**Recommended Permission:** Will be the same as `/msupps create`.
+
+---
+
+#### Deleting a Maintenance Tunnel Map
+
+**Usage:**
+
+```
+/msupps mapdelete [name]
+```
+
+**Arguments:**
+
+- name: The name of the map to delete.
+
+**Recommended Permission:** Will be the same as `/msupps create`.
+
+---
+
+#### Displaying a Maintenance Tunnel Map
+
+**Usage:**
+
+```
+/msupps mapshow [name]
+```
+
+**Arguments:**
+
+- name: The name of the map to display.
+
+**Recommended Permission:** Will be the same as `/msupps create`.
+
 
 ## Orders
 
