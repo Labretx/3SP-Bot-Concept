@@ -46,6 +46,11 @@ The goal of the bot is to provide helpful functionality to the Sundial Coalition
     - [ ] MapShow
 
 - [ ] Orders
+  - [ ] Create
+  - [ ] MPF
+  - [ ] Msupps
+  - [ ] Stats
+
 - [ ] Map Info
 - [ ] Facilities
 - [ ] Admin
