@@ -121,7 +121,7 @@ There may be an exception for a coalition server.
 **Usage:**
   
 ```
-/stockpile create [name} [hex] [city] [code] [type]
+/stockpile create [name] [hex] [city] [code] [type]
 ```
 
 **Arguments:**
