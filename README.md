@@ -59,6 +59,10 @@ The goal of the bot is to provide helpful functionality to the Sundial Coalition
     - [ ] Buildings
 
 - [ ] Facilities
+  - [ ] Create
+  - [ ] Delete
+  - [ ] Edit
+ 
 - [ ] Admin
 
 # Functionalities
@@ -512,5 +516,73 @@ The dynamic data has to be wiped after a new war starts.
 Using the [warapi](https://github.com/clapfoot/warapi) there will be daily updates on which territories on the map have changed owner and will be sent to the configured chat.
 
 ## Facilities
+
+The `facilities` module is used to create facilities and useful information about them.
+
+Each facility will have a defined in- and output, which can be changed as needed so members know what to deliver to facilities to keep them running.
+
+### Commands
+
+#### Creating a Facility
+
+**Usage:**
+
+```
+/facility create [name] [input] [output] [location] [manager]
+```
+
+**Arguments:**
+
+- name: The name of the facility.
+- input: Resources to deliver to the facility.
+- output: Resources the facility produces.
+- location: An image of the map highlighting where to find the facility.
+- manager: The member who is responsible for the facility.
+
+**Recommended Permission:** `Officer`
+
+---
+
+#### Deleting a facility
+
+**Usage:**
+
+```
+/facility delete [name]
+```
+
+**Arguments:**
+
+- name: The name of the facility to be deleted.
+
+**Recommended Permission:** Will be the same as `/facility create`.
+
+> [!NOTE]
+> It might be necessary to delete a facility if it is abandoned or lost.\
+> Only the member that created a facility will be able to delete it again.
+
+---
+
+#### Editing a Facility
+
+**Usage:**
+
+```
+/facility edit [name] [newname] [input] [output] [location] [manager]
+```
+
+**Arguments:**
+
+- name: The name of the facility.
+- newname (optional): The new name of the facility.
+- input (optional): Resources to deliver to the facility.
+- output (optional): Resources the facility produces.
+- location (optional): An image of the map highlighting where to find the facility.
+- manager (optional): The member who is responsible for the facility.
+
+**Recommended Permission:** Will be the same as `/facility create`
+
+> [!NOTE]
+> Only the member that created the facility will be able to delete it again.
 
 ## Admin
