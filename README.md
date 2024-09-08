@@ -62,7 +62,12 @@ The goal of the bot is to provide helpful functionality to the Sundial Coalition
   - [ ] Create
   - [ ] Delete
   - [ ] Edit
- 
+
+- [ ] Activity
+  - [ ] Commands
+    - [ ] Check
+  - [ ] Reaction Listener
+  
 - [ ] Admin
   - [x] Whitelist Add
   - [x] Whitelist Remove
@@ -588,6 +593,34 @@ Each facility will have a defined in- and output, which can be changed as needed
 
 > [!NOTE]
 > Only the member that created the facility will be able to delete it again.
+
+## Activity
+
+The `activity` module can be used to create activity checks for roles and if failed will remove a members role and assigns a vacation role.
+
+This is done to minimize access to intel and obviously to see who is active and who is not.
+
+### Commands
+
+#### Creating an Activity Check
+
+**Usage:**
+
+```
+/activity check [role] [emoji] [deadline]
+```
+
+**Arguments:**
+
+- role: The role to create an activity check for.
+- emoji: The emoji people need to react to, to complete the activity check.
+- deadline: The time where 
+
+**Recommended Permission:** `Officer`
+
+> [!NOTE]
+> The activity check will be added to the next message, the person sends in the channel the command was executed in.\
+> After reaching the deadline, all members who haven't completed the activity check will have all roles removed and will be assigned the configured role.
 
 ## Admin
 
