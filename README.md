@@ -51,6 +51,11 @@ The goal of the bot is to provide helpful functionality to the Sundial Coalition
     - [ ] Create
     - [ ] MPF
     - [ ] Stats
+    - [ ] Recurring
+    - [ ] Pause
+    - [ ] Unpause
+    - [ ] Delete
+    - [ ] List
 
 - [ ] Map Info
   - [ ] Territory Updates
@@ -314,7 +319,7 @@ The `msupps` module is used to manage maintenance tunnels and their daily msupps
 /msupps list
 ```
 
-**Recommended Permission:** WIll be the same as `/msupps create`.
+**Recommended Permission:** Will be the same as `/msupps create`.
 
 > [!NOTE]
 > When the created task updates the inventory, it will also reflect on the list.
@@ -417,7 +422,7 @@ The database will keep track of the orders and can be used to create statistics.
 
 ### Commands
 
-#### Creating an order
+#### Creating an Order
 
 **Usage:**
 
@@ -434,7 +439,7 @@ The database will keep track of the orders and can be used to create statistics.
 
 ---
 
-#### Creating an MPF order
+#### Creating an MPF Order
 
 **Usage:**
 
@@ -447,11 +452,87 @@ The database will keep track of the orders and can be used to create statistics.
 - item: The item that should be queued. Will autocomplete while typing.
 - amount (optional): The amount of orders to be created. Default is 1.
 
-**Recommended Permission:** `Officer`
+**Recommended Permission:** Will be the same as `/order create`.
 
 > [!NOTE]
 > MPF orders will always show the material cost in materials and crates.
 > An MPF order will **always** be a full queue.
+
+---
+
+#### Creating a recurring Order
+
+**Usage:**
+
+```
+/order recurring [order] [amount] [interval]
+```
+
+**Arguments:**
+
+- order: The text of the order. For example: *60 crates shirts to Buckler Sound*
+- amount (optional): The amount of orders to be created. Default is 1.
+- interval (optional): The interval of the recurring order in days. Default is 1.
+
+**Recommended Permission:** Will be the same as `/order create`.
+
+#### Pausing a recurring Order
+
+**Usage:**
+
+```
+/order pause [id]
+```
+
+**Arguments:**
+
+- id: The ID of the order to pause.
+
+**Recommended Permission:** Will be the same as `/order create`.
+
+---
+
+#### Unpausing a recurring Order
+
+**Usage:**
+
+```
+/order unpause [id]
+```
+
+**Arguments:**
+
+- id: The ID of the order to unpause.
+
+**Recommended Permission:** Will be the same as `/order create`.
+
+---
+
+#### Deleting a recurring Order
+
+**Usage:**
+
+```
+/order delete [id]
+```
+
+**Arguments:**
+
+- id: The ID of the order to delete.
+
+**Recommended Permission:** Will be the same as `/order create`.
+
+---
+
+#### Listing recurring Orders
+
+**Usage:**
+
+```
+/order list
+```
+
+**Recommended Permission:** Will be the same as `/order create`.
 
 ---
 
