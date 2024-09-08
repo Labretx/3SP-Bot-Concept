@@ -64,6 +64,10 @@ The goal of the bot is to provide helpful functionality to the Sundial Coalition
   - [ ] Edit
  
 - [ ] Admin
+  - [x] Whitelist Add
+  - [x] Whitelist Remove
+  - [ ] Data Create
+  - [ ] Data Wipe 
 
 # Functionalities
 Below is a list of all the proposed functionalities **3SP-Bot** could have.
@@ -586,3 +590,63 @@ Each facility will have a defined in- and output, which can be changed as needed
 > Only the member that created the facility will be able to delete it again.
 
 ## Admin
+
+The `admin` module is used to manage data necessary for the other modules to work correctly.
+
+This includes for example changing locations of resource fields and industry buildings.
+
+### Commands
+
+#### Whitelisting a Server
+
+**Usage:**
+
+```
+/whitelist add
+```
+
+**Required Permission:** `Trusted`
+
+> [!NOTE]
+> Whitelisting means enabling the bot for the server where the command was executed.
+
+---
+
+#### Removing a Server from the Whitelist
+
+**Usage:**
+
+```
+/whitelist remove
+```
+
+**Required Permission:** `Trusted`
+
+---
+
+#### Adding City Configuration and Resource Locations
+
+**Usage:**
+
+```
+/data create
+```
+
+**Required Permission:** `Admin`
+
+---
+
+
+#### Wiping dynamic Data
+
+**Usage:**
+
+```
+/data wipe
+```
+
+**Required Permission:** `Admin`
+
+> [!CAUTION]
+> This command is ***ONLY*** to be used at the start of the war!\
+> This removes all data from the stockpiles and city_buildings table. 
