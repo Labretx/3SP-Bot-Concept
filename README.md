@@ -36,7 +36,7 @@ The goal of the bot is to provide helpful functionality to the Sundial Coalition
     - [x] Create
     - [x] Delete
     - [x] List
-    - [ ] Edit
+    - [x] Edit
     - [x] Add
     - [ ] MapCreate
     - [ ] MapDelete
