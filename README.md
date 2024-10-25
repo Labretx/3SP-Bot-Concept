@@ -32,7 +32,7 @@ The goal of the bot is to provide helpful functionality to the Sundial Coalition
 
 - [ ] Msupps
   - [x] Task to reduce inventory by demand every hour
-  - [ ] Commands
+  - [x] Commands
     - [x] Create
     - [x] Delete
     - [x] List
@@ -45,7 +45,7 @@ The goal of the bot is to provide helpful functionality to the Sundial Coalition
 - [ ] Orders
   - [ ] Msupps
   - [ ] Commands
-    - [ ] Create
+    - [x] Create
     - [ ] MPF
     - [ ] Stats
     - [ ] Recurring
