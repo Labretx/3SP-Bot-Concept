@@ -4,7 +4,7 @@
   
 At the core it is a CRUD app, utilizing permissionbound commands within Discord to manage different aspects of the game **Foxhole**.
   
-The goal of the bot is to provide helpful functionality to the Sundial Coalition and its regiments.
+The goal of the bot is to provide helpful functionality to the 3SP clan.
 
 ## Development Team
 
@@ -46,9 +46,9 @@ The goal of the bot is to provide helpful functionality to the Sundial Coalition
   - [x] Msupps
   - [ ] Commands
     - [x] Create
-    - [ ] MPF
+    - [x] MPF
     - [ ] Stats
-    - [ ] Recurring
+    - [x] Recurring
     - [ ] Pause
     - [ ] Unpause
     - [ ] Delete
