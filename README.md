@@ -49,10 +49,10 @@ The goal of the bot is to provide helpful functionality to the 3SP clan.
     - [x] MPF
     - [ ] Stats
     - [x] Recurring
-    - [ ] Pause
-    - [ ] Unpause
-    - [ ] Delete
-    - [ ] List
+    - [x] Pause
+    - [x] Unpause
+    - [x] Delete
+    - [x] List
 
 - [ ] Map Info
   - [ ] Territory Updates
