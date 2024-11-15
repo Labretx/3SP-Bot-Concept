@@ -12,15 +12,15 @@ The goal of the bot is to provide helpful functionality to the 3SP clan.
 
 ## Development Progress
 
-- [ ] Permissions
-  - [ ] Command checks
-  - [ ] Database table
+- [x] Permissions
+  - [x] Command checks
+  - [x] Database table
 
 - [ ] Configuration
-  - [ ] Permissions
-  - [ ] Stockpiles
-  - [ ] Msupps
-  - [ ] Orders
+  - [x] Permissions
+  - [x] Stockpiles
+  - [x] Msupps
+  - [x] Orders
   - [ ] Map Info
   - [ ] Facilities
   - [ ] Admin
