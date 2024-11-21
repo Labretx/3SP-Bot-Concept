@@ -1,6 +1,6 @@
 # 3SP-Bot-Concept
 
-**3SP-Bot** (name is not final) is a Discord bot written in Python using the [hikari](https://www.hikari-py.dev/]) and [hikari-lightbulb](https://hikari-lightbulb.readthedocs.io/en/latest/) libraries.
+**3SP-Bot** (name is not final) is a Discord bot written in Python using the [hikari](https://www.hikari-py.dev]) and [hikari-lightbulb](https://hikari-lightbulb.readthedocs.io/en/latest/) libraries.
   
 At the core it is a CRUD app, utilizing permissionbound commands within Discord to manage different aspects of the game **Foxhole**.
   
